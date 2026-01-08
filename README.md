@@ -19,5 +19,5 @@ We use Redis SET with:
 - Single Redis instance
 - Local Redis server running
 - No distributed cluster considerations
-- No HTTP server — only class + driver usage
-- Basic correctness > production optimization
+- No HTTP server, only class + driver usage
+- Basic correctness is the main focus
