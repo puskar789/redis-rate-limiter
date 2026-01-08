@@ -16,7 +16,7 @@ We use Redis SET with:
 
 # Assumptions:
 
-Single Redis instance
+- Single Redis instance
 - Local Redis server running
 - No distributed cluster considerations
 - No HTTP server — only class + driver usage
