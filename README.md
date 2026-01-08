@@ -1,9 +1,9 @@
 # redis-rate-limiter
 
-Redis key design:
+# Redis key design:
 The format rate:<ip_address>:<api_route> was chosen so that each IP address and API route combination has its own counter. The value stored is simply the request count in current window.
 
-How expiration is handled:
+# How expiration is handled:
 
 We use Redis SET with:
 
@@ -17,14 +17,10 @@ Counter increments using INCR key
 
 Requests counted in discrete time slots. If count exceeds limit we block remaining requests. When TTL expires, a new window starts
 
-Assumptions
+# Assumptions:
 
 Single Redis instance
-
-Local Redis server running
-
-No distributed cluster considerations
-
-No HTTP server — only class + driver usage
-
-Basic correctness > production optimization
+- Local Redis server running
+- No distributed cluster considerations
+- No HTTP server — only class + driver usage
+- Basic correctness > production optimization
